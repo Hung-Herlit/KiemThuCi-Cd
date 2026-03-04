@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="dao.impl.test.BillDAOImplTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="testAutoCreateServicingBill"/>
+        </methods>
+      </class> <!-- dao.impl.test.BillDAOImplTest -->
+      <class name="dao.impl.test.ProductDAOImplTest">
+        <methods>
+          <include name="testFindProductByName"/>
+          <include name="testCreateProduct"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- dao.impl.test.ProductDAOImplTest -->
+      <class name="dao.impl.test.BillDetailDAOImplTest">
+        <methods>
+          <include name="testAddDetailToBill"/>
+          <include name="testUpdateQuantity"/>
+          <include name="testFindByBillId"/>
+          <include name="setUp"/>
+          <include name="testFindByProductId"/>
+        </methods>
+      </class> <!-- dao.impl.test.BillDetailDAOImplTest -->
+      <class name="dao.impl.test.UserDAOImplTest">
+        <methods>
+          <include name="testCreateNewUser"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- dao.impl.test.UserDAOImplTest -->
+      <class name="dao.impl.test.CategoryDAOImplTest">
+        <methods>
+          <include name="testCreateCategory"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- dao.impl.test.CategoryDAOImplTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

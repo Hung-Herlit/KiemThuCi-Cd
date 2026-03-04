@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="25" passed="16" failed="9" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-03-04T15:24:18 ICT" name="Suite" finished-at="2026-03-04T15:24:19 ICT" duration-ms="1476">
+    <groups>
+    </groups>
+    <test started-at="2026-03-04T15:24:18 ICT" name="Test" finished-at="2026-03-04T15:24:19 ICT" duration-ms="1476">
+      <class name="dao.impl.test.ProductDAOImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:dao.impl.test.ProductDAOImplTest@72967906]" started-at="2026-03-04T15:24:19 ICT" name="setUp" finished-at="2026-03-04T15:24:19 ICT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testCreateProduct()[pri:1, instance:dao.impl.test.ProductDAOImplTest@72967906]" started-at="2026-03-04T15:24:19 ICT" name="testCreateProduct" finished-at="2026-03-04T15:24:19 ICT" duration-ms="10" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[com.microsoft.sqlserver.jdbc.SQLServerException: Cannot insert the value NULL into column 'ShelfId', table 'H2T.dbo.Products'; column does not allow nulls. INSERT fails. INSERT INTO Products (Id, Name, UnitPrice, Discount, Image, ShelfId, Stock, CategoryId,status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [Ljava.lang.Object;@33fe57a9]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: com.microsoft.sqlserver.jdbc.SQLServerException: Cannot insert the value NULL into column 'ShelfId', table 'H2T.dbo.Products'; column does not allow nulls. INSERT fails. INSERT INTO Products (Id, Name, UnitPrice, Discount, Image, ShelfId, Stock, CategoryId,status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) [Ljava.lang.Object;@33fe57a9
+at util.XJdbc.executeUpdate(XJdbc.java:80)
+at dao.impl.ProductDAOImpl.create(ProductDAOImpl.java:43)
+at dao.impl.test.ProductDAOImplTest.testCreateProduct(ProductDAOImplTest.java:30)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateProduct -->
+        <test-method signature="testFindProductByName()[pri:2, instance:dao.impl.test.ProductDAOImplTest@72967906]" started-at="2026-03-04T15:24:19 ICT" name="testFindProductByName" finished-at="2026-03-04T15:24:19 ICT" duration-ms="7" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected object to not be null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected object to not be null
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.assertNotNull(Assert.java:1484)
+at org.testng.Assert.assertNotNull(Assert.java:1468)
+at dao.impl.test.ProductDAOImplTest.testFindProductByName(ProductDAOImplTest.java:40)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindProductByName -->
+        <test-method signature="testUpdateProductPrice()[pri:3, instance:dao.impl.test.ProductDAOImplTest@72967906]" started-at="2026-03-04T15:24:19 ICT" name="testUpdateProductPrice" finished-at="2026-03-04T15:24:19 ICT" duration-ms="29" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateProductPrice -->
+        <test-method signature="testFindByCategory()[pri:4, instance:dao.impl.test.ProductDAOImplTest@72967906]" started-at="2026-03-04T15:24:19 ICT" name="testFindByCategory" finished-at="2026-03-04T15:24:19 ICT" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindByCategory -->
+        <test-method signature="testSoftDeleteProduct()[pri:5, instance:dao.impl.test.ProductDAOImplTest@72967906]" started-at="2026-03-04T15:24:19 ICT" name="testSoftDeleteProduct" finished-at="2026-03-04T15:24:19 ICT" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSoftDeleteProduct -->
+      </class> <!-- dao.impl.test.ProductDAOImplTest -->
+      <class name="dao.impl.test.UserDAOImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:dao.impl.test.UserDAOImplTest@49139829]" started-at="2026-03-04T15:24:18 ICT" name="setUp" finished-at="2026-03-04T15:24:18 ICT" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testCreateNewUser()[pri:1, instance:dao.impl.test.UserDAOImplTest@49139829]" started-at="2026-03-04T15:24:18 ICT" name="testCreateNewUser" finished-at="2026-03-04T15:24:19 ICT" duration-ms="918" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[com.microsoft.sqlserver.jdbc.SQLServerException: Violation of PRIMARY KEY constraint 'PK__Users__CA1E34ACE396ACFC'. Cannot insert duplicate key in object 'dbo.Users'. The duplicate key value is (0901234567). INSERT INTO Users (Sdt, Password, Status, Fullname, Photo, Role) VALUES (?, ?, ?, ?, ?, ?) [Ljava.lang.Object;@42b02722]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: com.microsoft.sqlserver.jdbc.SQLServerException: Violation of PRIMARY KEY constraint 'PK__Users__CA1E34ACE396ACFC'. Cannot insert duplicate key in object 'dbo.Users'. The duplicate key value is (0901234567). INSERT INTO Users (Sdt, Password, Status, Fullname, Photo, Role) VALUES (?, ?, ?, ?, ?, ?) [Ljava.lang.Object;@42b02722
+at util.XJdbc.executeUpdate(XJdbc.java:80)
+at dao.impl.UserDAOImpl.create(UserDAOImpl.java:36)
+at dao.impl.test.UserDAOImplTest.testCreateNewUser(UserDAOImplTest.java:30)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateNewUser -->
+        <test-method signature="testFindUserByValidID()[pri:2, instance:dao.impl.test.UserDAOImplTest@49139829]" started-at="2026-03-04T15:24:19 ICT" name="testFindUserByValidID" finished-at="2026-03-04T15:24:19 ICT" duration-ms="85" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindUserByValidID -->
+        <test-method signature="testUpdateUserPassword()[pri:3, instance:dao.impl.test.UserDAOImplTest@49139829]" started-at="2026-03-04T15:24:19 ICT" name="testUpdateUserPassword" finished-at="2026-03-04T15:24:19 ICT" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateUserPassword -->
+        <test-method signature="testSoftDeleteUser()[pri:4, instance:dao.impl.test.UserDAOImplTest@49139829]" started-at="2026-03-04T15:24:19 ICT" name="testSoftDeleteUser" finished-at="2026-03-04T15:24:19 ICT" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSoftDeleteUser -->
+        <test-method signature="testFindAllUsers()[pri:5, instance:dao.impl.test.UserDAOImplTest@49139829]" started-at="2026-03-04T15:24:19 ICT" name="testFindAllUsers" finished-at="2026-03-04T15:24:19 ICT" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindAllUsers -->
+      </class> <!-- dao.impl.test.UserDAOImplTest -->
+      <class name="dao.impl.test.CategoryDAOImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:dao.impl.test.CategoryDAOImplTest@747ddf94]" started-at="2026-03-04T15:24:19 ICT" name="setUp" finished-at="2026-03-04T15:24:19 ICT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testCreateCategory()[pri:1, instance:dao.impl.test.CategoryDAOImplTest@747ddf94]" started-at="2026-03-04T15:24:19 ICT" name="testCreateCategory" finished-at="2026-03-04T15:24:19 ICT" duration-ms="6" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[com.microsoft.sqlserver.jdbc.SQLServerException: Violation of PRIMARY KEY constraint 'PK__Catogori__3213E83FDC7B2C85'. Cannot insert duplicate key in object 'dbo.Categories'. The duplicate key value is (C01). INSERT INTO Categories(Id, Name, Status) VALUES(?, ?, ?) [Ljava.lang.Object;@55dfcc6]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: com.microsoft.sqlserver.jdbc.SQLServerException: Violation of PRIMARY KEY constraint 'PK__Catogori__3213E83FDC7B2C85'. Cannot insert duplicate key in object 'dbo.Categories'. The duplicate key value is (C01). INSERT INTO Categories(Id, Name, Status) VALUES(?, ?, ?) [Ljava.lang.Object;@55dfcc6
+at util.XJdbc.executeUpdate(XJdbc.java:80)
+at dao.impl.CategoryDAOImpl.create(CategoryDAOImpl.java:33)
+at dao.impl.test.CategoryDAOImplTest.testCreateCategory(CategoryDAOImplTest.java:28)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateCategory -->
+        <test-method signature="testUpdateCategoryName()[pri:2, instance:dao.impl.test.CategoryDAOImplTest@747ddf94]" started-at="2026-03-04T15:24:19 ICT" name="testUpdateCategoryName" finished-at="2026-03-04T15:24:19 ICT" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateCategoryName -->
+        <test-method signature="testFindAllCategories()[pri:3, instance:dao.impl.test.CategoryDAOImplTest@747ddf94]" started-at="2026-03-04T15:24:19 ICT" name="testFindAllCategories" finished-at="2026-03-04T15:24:19 ICT" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindAllCategories -->
+        <test-method signature="testFindAllActive()[pri:4, instance:dao.impl.test.CategoryDAOImplTest@747ddf94]" started-at="2026-03-04T15:24:19 ICT" name="testFindAllActive" finished-at="2026-03-04T15:24:19 ICT" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindAllActive -->
+        <test-method signature="testSoftDeleteCategory()[pri:5, instance:dao.impl.test.CategoryDAOImplTest@747ddf94]" started-at="2026-03-04T15:24:19 ICT" name="testSoftDeleteCategory" finished-at="2026-03-04T15:24:19 ICT" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSoftDeleteCategory -->
+      </class> <!-- dao.impl.test.CategoryDAOImplTest -->
+      <class name="dao.impl.test.BillDetailDAOImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:dao.impl.test.BillDetailDAOImplTest@2f9f7dcf]" started-at="2026-03-04T15:24:19 ICT" name="setUp" finished-at="2026-03-04T15:24:19 ICT" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testAddDetailToBill()[pri:1, instance:dao.impl.test.BillDetailDAOImplTest@2f9f7dcf]" started-at="2026-03-04T15:24:19 ICT" name="testAddDetailToBill" finished-at="2026-03-04T15:24:19 ICT" duration-ms="10" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[com.microsoft.sqlserver.jdbc.SQLServerException: The INSERT statement conflicted with the FOREIGN KEY constraint "FK__BillDetai__BillI__440B1D61". The conflict occurred in database "H2T", table "dbo.Bills", column 'id'. INSERT INTO BillDetails(BillId, ProductId, UnitPrice, Quantity) VALUES (?, ?, ?, ?) [Ljava.lang.Object;@28ec166e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: com.microsoft.sqlserver.jdbc.SQLServerException: The INSERT statement conflicted with the FOREIGN KEY constraint "FK__BillDetai__BillI__440B1D61". The conflict occurred in database "H2T", table "dbo.Bills", column 'id'. INSERT INTO BillDetails(BillId, ProductId, UnitPrice, Quantity) VALUES (?, ?, ?, ?) [Ljava.lang.Object;@28ec166e
+at util.XJdbc.executeUpdate(XJdbc.java:80)
+at dao.impl.BillDetailDAOImpl.create(BillDetailDAOImpl.java:36)
+at dao.impl.test.BillDetailDAOImplTest.testAddDetailToBill(BillDetailDAOImplTest.java:30)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddDetailToBill -->
+        <test-method signature="testFindByBillId()[pri:2, instance:dao.impl.test.BillDetailDAOImplTest@2f9f7dcf]" started-at="2026-03-04T15:24:19 ICT" name="testFindByBillId" finished-at="2026-03-04T15:24:19 ICT" duration-ms="16" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at dao.impl.test.BillDetailDAOImplTest.testFindByBillId(BillDetailDAOImplTest.java:45)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindByBillId -->
+        <test-method signature="testUpdateQuantity()[pri:3, instance:dao.impl.test.BillDetailDAOImplTest@2f9f7dcf]" started-at="2026-03-04T15:24:19 ICT" name="testUpdateQuantity" finished-at="2026-03-04T15:24:19 ICT" duration-ms="6" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "entity.BillDetail.setQuantity(int)" because "bd" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "entity.BillDetail.setQuantity(int)" because "bd" is null
+at dao.impl.test.BillDetailDAOImplTest.testUpdateQuantity(BillDetailDAOImplTest.java:52)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateQuantity -->
+        <test-method signature="testFindByProductId()[pri:4, instance:dao.impl.test.BillDetailDAOImplTest@2f9f7dcf]" started-at="2026-03-04T15:24:19 ICT" name="testFindByProductId" finished-at="2026-03-04T15:24:19 ICT" duration-ms="8" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at dao.impl.test.BillDetailDAOImplTest.testFindByProductId(BillDetailDAOImplTest.java:68)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindByProductId -->
+        <test-method signature="testDeleteDetail()[pri:5, instance:dao.impl.test.BillDetailDAOImplTest@2f9f7dcf]" started-at="2026-03-04T15:24:19 ICT" name="testDeleteDetail" finished-at="2026-03-04T15:24:19 ICT" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteDetail -->
+      </class> <!-- dao.impl.test.BillDetailDAOImplTest -->
+      <class name="dao.impl.test.BillDAOImplTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:dao.impl.test.BillDAOImplTest@5b8dfcc1]" started-at="2026-03-04T15:24:19 ICT" name="setUp" finished-at="2026-03-04T15:24:19 ICT" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testCreateBill()[pri:1, instance:dao.impl.test.BillDAOImplTest@5b8dfcc1]" started-at="2026-03-04T15:24:19 ICT" name="testCreateBill" finished-at="2026-03-04T15:24:19 ICT" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateBill -->
+        <test-method signature="testAutoCreateServicingBill()[pri:2, instance:dao.impl.test.BillDAOImplTest@5b8dfcc1]" started-at="2026-03-04T15:24:19 ICT" name="testAutoCreateServicingBill" finished-at="2026-03-04T15:24:19 ICT" duration-ms="8" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected object to not be null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected object to not be null
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.assertNotNull(Assert.java:1484)
+at org.testng.Assert.assertNotNull(Assert.java:1468)
+at dao.impl.test.BillDAOImplTest.testAutoCreateServicingBill(BillDAOImplTest.java:52)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAutoCreateServicingBill -->
+        <test-method signature="testUpdateBillStatus()[pri:3, instance:dao.impl.test.BillDAOImplTest@5b8dfcc1]" started-at="2026-03-04T15:24:19 ICT" name="testUpdateBillStatus" finished-at="2026-03-04T15:24:19 ICT" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateBillStatus -->
+        <test-method signature="testFindBillById()[pri:4, instance:dao.impl.test.BillDAOImplTest@5b8dfcc1]" started-at="2026-03-04T15:24:19 ICT" name="testFindBillById" finished-at="2026-03-04T15:24:19 ICT" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindBillById -->
+        <test-method signature="testFindAllBills()[pri:5, instance:dao.impl.test.BillDAOImplTest@5b8dfcc1]" started-at="2026-03-04T15:24:19 ICT" name="testFindAllBills" finished-at="2026-03-04T15:24:19 ICT" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindAllBills -->
+      </class> <!-- dao.impl.test.BillDAOImplTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
