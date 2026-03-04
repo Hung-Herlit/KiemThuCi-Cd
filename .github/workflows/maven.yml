@@ -1,0 +1,26 @@
+name: Java CI with Maven
+
+# Kích hoạt workflow khi có thao tác push hoặc pull request vào nhánh main
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Chạy trên máy ảo Ubuntu của GitHub
+
+    steps:
+    - name: Lấy mã nguồn
+      uses: actions/checkout@v3
+
+    - name: Cài đặt JDK 21 
+      uses: actions/setup-java@v3
+      with:
+        java-version: '21' # Đổi thành 11 hoặc 21 tùy vào dự án của bạn
+        distribution: 'temurin'
+        cache: maven # Caching để tăng tốc độ cho các lần build sau
+
+    - name: Chạy kiểm thử và Build dự án với Maven
+      run: mvn -B package --file pom.xml
